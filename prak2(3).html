@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Website Semantik</title>
+  <style>
+    /* Reset dasar */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      background-color: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    /* Header dan Navigasi */
+    header {
+      background: linear-gradient(90deg, #ffcccc, #ffccff);
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      display: inline-block;
+    }
+
+    nav li {
+      display: inline;
+      margin: 0 10px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: #ff00ff;
+    }
+
+    /* Konten Utama */
+    main {
+      display: grid;
+      grid-template-columns: 1fr 300px; /* Konten utama + aside */
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Bagian Utama (Section dan Article) */
+    section {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    section h2 {
+      margin-bottom: 10px;
+      color: #ff33cc;
+    }
+
+    article {
+      margin-bottom: 20px;
+    }
+
+    article h3 {
+      margin-bottom: 5px;
+      color: #cc0099;
+    }
+
+    /* Aside (Sidebar) */
+    aside {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-top: 20px;
+      height: fit-content;
+    }
+
+    aside h3 {
+      margin-bottom: 10px;
+      color: #cc0099;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background-color: #f1f1f1;
+      padding: 10px;
+      margin-top: 20px;
+    }
+
+    footer p {
+      color: #999;
+    }
+
+    /* Responsif (Mobile) */
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      nav li {
+        display: block;
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Bagian Header -->
+  <header>
+    <h1>My Semantic Website</h1>
+    <nav>
+      <ul>
+        <li><a href="#home">Beranda</a></li>
+        <li><a href="#news">Berita</a></li>
+        <li><a href="#articles">Artikel</a></li>
+        <li><a href="#contact">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Konten Utama -->
+  <main role="main">
+    <!-- Bagian Kiri: Section + Article -->
+    <div>
+      <!-- Section Beranda -->
+      <section id="home">
+        <h2>Selamat Datang</h2>
+        <p>
+          Halo! Ini adalah contoh halaman web dengan struktur HTML semantik. 
+          Anda bisa menambahkan teks, gambar, atau konten lain di sini.
+        </p>
+      </section>
+
+      <!-- Section Berita -->
+      <section id="news">
+        <h2>Berita Terbaru</h2>
+        <article>
+          <h3>Judul Berita 1</h3>
+          <p>
+            Konten berita 1. Lorem ipsum dolor sit amet, consectetur 
+            adipiscing elit. Curabitur nec velit quis elit malesuada sodales.
+          </p>
+          <figure>
+            <img src="path/to/image1.jpg" alt="Descriptive Alt Text">
+            <figcaption>Caption for image 1</figcaption>
+          </figure>
+        </article>
+        <article>
+          <h3>Judul Berita 2</h3>
+          <p>
+            Konten berita 2. Suspendisse potenti. In pharetra lectus eget 
+            libero ultrices, sed tristique mauris tincidunt.
+          </p>
+          <figure>
+            <img src="path/to/image2.jpg" alt="Descriptive Alt Text">
+            <figcaption>Caption for image 2</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <!-- Section Artikel -->
+      <section id="articles">
+        <h2>Artikel Menarik</h2>
+        <article>
+          <h3>Artikel 1</h3>
+          <p>
+            Konten artikel 1. Pellentesque ac dui ut velit ultricies 
+            vulputate. Phasellus blandit leo et nibh laoreet dignissim.
+          </p>
+          <figure>
+            <img src="path/to/image3.jpg" alt="Descriptive Alt Text">
+            <figcaption>Caption for image 3</figcaption>
+          </figure>
+        </article>
+        <article>
+          <h3>Artikel 2</h3>
+          <p>
+            Konten artikel 2. Nulla facilisi. Cras id diam imperdiet, 
+            bibendum orci eget, dictum lacus.
+          </p>
+          <figure>
+            <img src="path/to/image4.jpg" alt="Descriptive Alt Text">
+            <figcaption>Caption for image 4</figcaption>
+          </figure>
+        </article>
+      </section>
+
+      <!-- Section Kontak -->
+      <section id="contact" role="contentinfo">
+        <h2>Kontak Kami</h2>
+        <address>
+          <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+          <p>Tel: 123-456-7890</p>
+        </address>
+      </section>
+    </div>
+
+    <!-- Bagian Kanan: Aside (Sidebar) -->
+    <aside role="complementary">
+      <h3>Info Terkini</h3>
+      <p>
+        Ini adalah area sidebar yang bisa Anda gunakan untuk menampilkan 
+        info singkat, iklan, tautan eksternal, atau apapun sesuai kebutuhan.
+      </p>
+      <hr />
+      <h3>Event Mendatang</h3>
+      <ul>
+        <li>Workshop Web Development</li>
+        <li>Seminar UI/UX</li>
+        <li>Meetup Komunitas Front-End</li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Bagian Footer -->
+  <footer>
+    <p>&copy; 2024 My Semantic Website. All rights reserved.</p>
+  </footer>
+</body>
+</html>

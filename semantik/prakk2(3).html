@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoNature - Pelestarian Alam Berkelanjutan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #f0f8f0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c5f2d, #339933);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            background-color: #ffffff;
+            padding: 1rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #2c5f2d;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #339933;
+        }
+
+        .hero {
+            padding: 4rem 2rem;
+            text-align: center;
+            background: url('https://source.unsplash.com/random/1920x1080/?nature') center/cover;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            padding: 3rem 2rem;
+            background-color: white;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Style untuk section tambahan */
+        .page-section {
+            padding: 4rem 2rem;
+            background-color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #2c5f2d;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .program-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .program-card {
+            padding: 1.5rem;
+            border-left: 4px solid #2c5f2d;
+            background-color: #f8fff8;
+        }
+
+        .contact-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .contact-info {
+            background: #e8f5e9;
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        footer {
+            background-color: #2c5f2d;
+            color: white;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        .newsletter {
+            background-color: #e8f5e9;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        button {
+            background-color: #2c5f2d;
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #339933;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .about-content,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🌿 EcoNature</h1>
+        <p>Pelestarian Alam Berkelanjutan</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#beranda"><i class="fas fa-home"></i> Beranda</a></li>
+            <li><a href="#tentang"><i class="fas fa-tree"></i> Tentang</a></li>
+            <li><a href="#program"><i class="fas fa-hand-holding-heart"></i> Program</a></li>
+            <li><a href="#kontak"><i class="fas fa-envelope"></i> Kontak</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="beranda" class="hero">
+            <h2>Selamat Datang di EcoNature</h2>
+            <p>Bersama kita jaga kelestarian alam untuk masa depan yang lebih baik</p>
+            <button>Bergabung Sekarang</button>
+        </section>
+
+        <section class="features">
+            <article class="feature-card">
+                <i class="fas fa-recycle fa-3x" style="color: #2c5f2d;"></i>
+                <h3>Program Daur Ulang</h3>
+                <p>Kami menyediakan fasilitas daur ulang sampah terpadu untuk lingkungan yang lebih bersih</p>
+            </article>
+
+            <article class="feature-card">
+                <i class="fas fa-leaf fa-3x" style="color: #2c5f2d;"></i>
+                <h3>Penghijauan</h3>
+                <p>Gerakan penanaman 10.000 pohon setiap tahunnya di berbagai daerah</p>
+            </article>
+
+            <article class="feature-card">
+                <i class="fas fa-graduation-cap fa-3x" style="color: #2c5f2d;"></i>
+                <h3>Edukasi Lingkungan</h3>
+                <p>Program edukasi untuk sekolah dan masyarakat tentang pentingnya pelestarian alam</p>
+            </article>
+        </section>
+
+        <!-- Section Tentang -->
+        <section id="tentang" class="page-section">
+            <h2 class="section-title"><i class="fas fa-leaf"></i> Tentang Kami</h2>
+            <div class="about-content">
+                <div>
+                    <h3>Komitmen Kami Terhadap Alam</h3>
+                    <p>EcoNature adalah organisasi nirlaba yang berdedikasi untuk melestarikan keanekaragaman hayati Indonesia melalui program berkelanjutan. Sejak berdiri tahun 2010, kami telah melakukan berbagai inisiatif pelestarian lingkungan di lebih dari 50 lokasi.</p>
+                    <br>
+                    <h4>Visi & Misi</h4>
+                    <ul>
+                        <li>Menciptakan ekosistem yang seimbang</li>
+                        <li>Edukasi masyarakat tentang lingkungan</li>
+                        <li>Pengembangan teknologi ramah lingkungan</li>
+                    </ul>
+                </div>
+                <img src="https://source.unsplash.com/random/600x400/?forest" alt="Tentang Kami" style="border-radius:10px">
+            </div>
+        </section>
+
+        <!-- Section Program -->
+        <section id="program" class="page-section">
+            <h2 class="section-title"><i class="fas fa-hands-helping"></i> Program Kami</h2>
+            <div class="program-grid">
+                <article class="program-card">
+                    <h3>Adopsi Pohon</h3>
+                    <p>Ikut serta dalam program penanaman dan perawatan pohon jangka panjang</p>
+                    <button>Detail Program</button>
+                </article>
+                
+                <article class="program-card">
+                    <h3>Ekowisata</h3>
+                    <p>Tur edukasi mengunjungi kawasan konservasi dan budaya lokal</p>
+                    <button>Detail Program</button>
+                </article>
+                
+                <article class="program-card">
+                    <h3>Bank Sampah</h3>
+                    <p>Sistem pengelolaan sampah terpadu dengan insentif ekonomi</p>
+                    <button>Detail Program</button>
+                </article>
+            </div>
+        </section>
+
+        <aside class="newsletter">
+            <h2>Bergabung dengan Newsletter Kami</h2>
+            <p>Dapatkan update terbaru tentang program dan kegiatan kami</p>
+            <form>
+                <input type="email" placeholder="Masukkan email Anda" required>
+                <button type="submit">Daftar</button>
+            </form>
+        </aside>
+
+        <!-- Section Kontak -->
+        <section id="kontak" class="page-section">
+            <h2 class="section-title"><i class="fas fa-envelope"></i> Hubungi Kami</h2>
+            <div class="contact-wrapper">
+                <form class="contact-form">
+                    <input type="text" placeholder="Nama Lengkap" required>
+                    <input type="email" placeholder="Alamat Email" required>
+                    <input type="tel" placeholder="Nomor Telepon">
+                    <textarea rows="5" placeholder="Pesan Anda" required></textarea>
+                    <button type="submit">Kirim Pesan</button>
+                </form>
+                
+                <div class="contact-info">
+                    <h3>Kantor Pusat</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Jl. Hijau Lestari No. 45, Jakarta</p>
+                    <p><i class="fas fa-phone"></i> (021) 1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> info@econature.id</p>
+                    
+                    <h3 style="margin-top:2rem">Media Sosial</h3>
+                    <div class="social-media">
+                        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+                        <a href="#"><i class="fab fa-youtube fa-2x"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div style="text-align: center;">
+            <p>🌍 Hubungi Kami:</p>
+            <p>Jl. Lingkungan Hijau No. 123</p>
+            <p>Email: contact@econature.id</p>
+            <p>&copy; 2023 EcoNature - All rights reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
