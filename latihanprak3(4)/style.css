@@ -1,0 +1,104 @@
+/* CSS Document */
+body {
+    background-color: #EFEFEF;
+    font-family: "Trebuchet MS", sans-serif;
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;
+    color: #0000FF;
+}
+
+a:hover {
+    color: #FF0000;
+}
+
+/* Main Container */
+#main_container {
+    width: 750px;
+    border: 1px solid #000000;
+    margin: 0 auto;
+    background-color: #FEFEFE;
+}
+
+/* Header */
+#header {
+    height: 174px;
+    width: 100%;
+    background-image: url(images/blabla.png);
+    background-repeat: no-repeat;
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 30px; /* Perbaikan dari 'size:30px;' */
+    float: right;
+    vertical-align: middle;
+    margin: 10px 20px 0 0;
+    font-family: Impact, Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    padding-left: 5px;
+    margin: 5px 0 0 0;
+}
+
+/* Paragraph & Table */
+p, table {
+    font-size: 14px; /* Menggunakan 'font-size' yang benar */
+    margin: 0;
+    padding: 10px;
+    text-align: justify;
+}
+
+/* Navigation */
+#navigation {
+    width: 100%;
+    border-top: 1px solid #000000;
+    border-bottom: 1px solid #000000;
+    text-align: center;
+    padding: 5px 0;
+}
+
+#navigation a {
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+/* Content */
+#content {
+    width: 100%;
+    padding: 10px;
+}
+
+/* Footer */
+#footer {
+    width: 100%;
+    border-top: 1px solid #000000;
+    text-align: center;
+    font-size: 9px;
+    padding: 5px 0;
+}
+
+/* Table */
+#tabel {
+    background-color: #FFFFFF;
+    padding: 2px;
+    border: 1px solid #222222;
+    margin: 2px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#tabel th {
+    color: #FFFFFF;
+    background-color: #222222;
+    padding: 5px;
+    text-align: left;
+}
+
+#tabel td {
+    padding: 5px;
+    border: 1px solid #222222;
+}

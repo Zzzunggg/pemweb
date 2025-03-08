@@ -1,0 +1,42 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+p {
+    font-size: 14px;
+}
+
+.dropdown-container {
+    margin: 20px;
+}
+
+.dropdown-btn {
+    padding: 5px 10px;
+    border: 1px solid #888;
+    background-color: #f8f8f8;
+    cursor: pointer;
+}
+
+.links {
+    margin-top: 5px;
+}
+
+.links a {
+    text-decoration: none;
+    color: blue;
+    margin-right: 5px;
+}
+
+.links a:hover {
+    color: red;
+}
+
+.links a.active {
+    color: red;
+    font-weight: bold;
+}
