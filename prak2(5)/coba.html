@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Elements</title>
+    <link rel="stylesheet" href="form_elements.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Form Elements</h2>
+        
+        <form>
+            <label for="input-box">Input Box</label>
+            <input type="text" id="input-box" name="input-box" placeholder="Enter text...">
+
+            <label for="signup-box">Sign Up Box</label>
+            <div class="signup-group">
+                <input type="text" id="signup-box" name="signup-box" placeholder="Enter username...">
+                <button type="button">OK</button>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit</button>
+
+            <div class="radio-group">
+                <input type="radio" id="option1" name="option" value="1">
+                <label for="option1"></label>
+                <input type="radio" id="option2" name="option" value="2">
+                <label for="option2"></label>
+                <input type="radio" id="option3" name="option" value="3">
+                <label for="option3"></label>
+            </div>
+
+            <label for="select-box">Select One</label>
+            <select id="select-box" name="select-box">
+                <option>Select One</option>
+                <option>Option 1</option>
+                <option>Option 2</option>
+                <option>Option 3</option>
+            </select>
+        </form>
+    </div>
+
+</body>
+</html>

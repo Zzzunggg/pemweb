@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 400px;
+    background-color: #ffffff;
+    border: 2px solid blue;
+}
+
+th {
+    background-color: blue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+td {
+    border: 1px solid blue;
+    padding: 10px;
+    background-color: #ccccff;
+}
+
+input[type="text"], textarea, select {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid blue;
+}
+
+.submit-row {
+    text-align: center;
+    background-color: blue;
+}
+
+input[type="submit"] {
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px 20px;
+    font-size: 16px;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+    <form>
+        <table>
+            <tr>
+                <th colspan="2">Form Pendaftaran</th>
+            </tr>
+            <tr>
+                <td>Nama</td>
+                <td><input type="text" name="nama"></td>
+            </tr>
+            <tr>
+                <td>Alamat</td>
+                <td><textarea name="alamat"></textarea></td>
+            </tr>
+            <tr>
+                <td>Jenis Kelamin</td>
+                <td>
+                    <input type="radio" name="jenis_kelamin" value="pria"> Pria
+                    <input type="radio" name="jenis_kelamin" value="wanita"> Wanita
+                </td>
+            </tr>
+            <tr>
+                <td>Pekerjaan</td>
+                <td>
+                    <select name="pekerjaan">
+                        <option value="pelajar">Pelajar</option>
+                        <option value="mahasiswa">Mahasiswa</option>
+                        <option value="pegawai">Pegawai</option>
+                        <option value="wiraswasta">Wiraswasta</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="submit-row">
+                    <input type="submit" value="Kirim">
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+</html>
