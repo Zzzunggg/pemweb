@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Double Click Event</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .kotak {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
+            background-color: yellow;
+            display: inline-block;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <p>Klik 2x pada setiap kotak untuk mengubah warnanya</p>
+    <div class="kotak"></div>
+    <div class="kotak"></div>
+    <div class="kotak"></div>
+    <div class="kotak"></div>
+
+    <script>
+        $(document).ready(function(){
+            $(".kotak").dblclick(function(){
+                let currentColor = $(this).css("background-color");
+                if (currentColor === "rgb(255, 0, 0)") { // merah
+                    $(this).css("background-color", "yellow");
+                } else {
+                    $(this).css("background-color", "red");
+                }
+            });
+        });
+    </script>
+</body>
+</html>

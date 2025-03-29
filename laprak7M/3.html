@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fade Effect</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .kotak {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            margin: 20px;
+            border: 1px solid black;
+            display: none; /* Awalnya disembunyikan agar fadeIn terlihat */
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <p>Gunakan tombol di bawah untuk menerapkan efek fade:</p>
+    <button id="fadeIn">Fade In</button>
+    <button id="fadeOut">Fade Out</button>
+    <button id="fadeTo">Fade to 0.3</button>
+    <button id="reset">Reset</button>
+    <div class="kotak"></div>
+
+    <script>
+        $(document).ready(function(){
+            $("#fadeIn").click(function(){
+                $(".kotak").fadeIn().css("opacity", 1); // Pastikan fadeIn mengembalikan opacity ke 1
+            });
+            
+            $("#fadeOut").click(function(){
+                $(".kotak").fadeOut();
+            });
+            
+            $("#fadeTo").click(function(){
+                $(".kotak").fadeTo("slow", 0.3);
+            });
+            
+            $("#reset").click(function(){
+                $(".kotak").css("opacity", 1).show(); // Reset ke keadaan awal
+            });
+        });
+    </script>
+</body>
+</html>
