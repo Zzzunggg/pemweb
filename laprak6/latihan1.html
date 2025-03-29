@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konversi Nilai Angka Menjadi Huruf</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .container {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .result {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 4px;
+            background-color: #f0f0f0;
+        }
+        .conversion-table {
+            margin-top: 30px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .conversion-table th, .conversion-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .conversion-table th {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Konversi Nilai Angka Menjadi Huruf</h1>
+    
+    <div class="container">
+        <div class="input-group">
+            <label for="nilaiInput">Masukkan Nilai (0-100):</label>
+            <input type="number" id="nilaiInput" min="0" max="100" placeholder="Contoh: 75">
+        </div>
+        
+        <button onclick="konversiNilai()">Konversi</button>
+        
+        <div class="result" id="hasilKonversi">
+            Hasil konversi akan ditampilkan di sini.
+        </div>
+        
+        <table class="conversion-table">
+            <thead>
+                <tr>
+                    <th>Rentang Nilai</th>
+                    <th>Nilai Huruf</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>0-40</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>41-55</td>
+                    <td>D</td>
+                </tr>
+                <tr>
+                    <td>56-60</td>
+                    <td>C</td>
+                </tr>
+                <tr>
+                    <td>61-65</td>
+                    <td>BC</td>
+                </tr>
+                <tr>
+                    <td>66-70</td>
+                    <td>B</td>
+                </tr>
+                <tr>
+                    <td>71-80</td>
+                    <td>AB</td>
+                </tr>
+                <tr>
+                    <td>81-100</td>
+                    <td>A</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        // Function untuk mengkonversi nilai angka menjadi nilai huruf
+        function konversiNilai() {
+            // Mengambil nilai dari input
+            const nilai = document.getElementById('nilaiInput').value;
+            
+            // Validasi input
+            if (nilai === '' || isNaN(nilai)) {
+                document.getElementById('hasilKonversi').innerHTML = 
+                    'Silakan masukkan nilai angka yang valid.';
+                return;
+            }
+            
+            // Konversi ke tipe number
+            const nilaiAngka = parseFloat(nilai);
+            
+            // Validasi rentang nilai
+            if (nilaiAngka < 0 || nilaiAngka > 100) {
+                document.getElementById('hasilKonversi').innerHTML = 
+                    'Nilai harus berada dalam rentang 0-100.';
+                return;
+            }
+            
+            // Konversi nilai angka ke nilai huruf
+            let nilaiHuruf;
+            
+            if (nilaiAngka >= 0 && nilaiAngka <= 40) {
+                nilaiHuruf = 'E';
+            } else if (nilaiAngka >= 41 && nilaiAngka <= 55) {
+                nilaiHuruf = 'D';
+            } else if (nilaiAngka >= 56 && nilaiAngka <= 60) {
+                nilaiHuruf = 'C';
+            } else if (nilaiAngka >= 61 && nilaiAngka <= 65) {
+                nilaiHuruf = 'BC';
+            } else if (nilaiAngka >= 66 && nilaiAngka <= 70) {
+                nilaiHuruf = 'B';
+            } else if (nilaiAngka >= 71 && nilaiAngka <= 80) {
+                nilaiHuruf = 'AB';
+            } else {
+                nilaiHuruf = 'A';
+            }
+            
+            // Menampilkan hasil konversi
+            document.getElementById('hasilKonversi').innerHTML = 
+                `Nilai angka <strong>${nilaiAngka}</strong> dikonversi menjadi nilai huruf <strong>${nilaiHuruf}</strong>.`;
+        }
+        
+        // Menambahkan event listener untuk input agar bisa disubmit dengan Enter
+        document.getElementById('nilaiInput').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                konversiNilai();
+            }
+        });
+    </script>
+</body>
+</html>
