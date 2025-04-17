@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Pasien Rumah Sakit</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f8ff;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 25px;
+        }
+        
+        .logo {
+            width: 150px;
+            margin-bottom: 15px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        td {
+            padding: 10px;
+            vertical-align: top;
+        }
+        
+        .label {
+            width: 40%;
+            font-weight: bold;
+            color: #34495e;
+        }
+        
+        input[type="text"], 
+        input[type="date"],
+        input[type="email"],
+        input[type="tel"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #bdc3c7;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 15px;
+        }
+        
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="UNUSA (1).png" alt="Logo UNUSA" class="logo">
+            <h2>FORM PENDAFTARAN PASIEN RUMAH SAKIT</h2>
+            <hr>
+        </div>
+
+        <form action="#">
+            <table border="0">
+                <tr>
+                    <td class="label">Nama Lengkap</td>
+                    <td><input type="text" name="nama" placeholder="Masukkan nama lengkap" required></td>
+                </tr>
+                <tr>
+                    <td class="label">Tanggal Lahir</td>
+                    <td><input type="date" name="tanggal_lahir" required></td>
+                </tr>
+                <tr>
+                    <td class="label">Jenis Kelamin</td>
+                    <td>
+                        <select name="jenis_kelamin" required>
+                            <option value="">Pilih Jenis Kelamin</option>
+                            <option value="L">Laki-laki</option>
+                            <option value="P">Perempuan</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="label">Alamat</td>
+                    <td><textarea name="alamat" rows="3" placeholder="Masukkan alamat lengkap" required></textarea></td>
+                </tr>
+                <tr>
+                    <td class="label">Email</td>
+                    <td><input type="email" name="email" placeholder="contoh@email.com" required></td>
+                </tr>
+                <tr>
+                    <td class="label">No. Telepon</td>
+                    <td><input type="tel" name="telepon" placeholder="0812-3456-7890" pattern="[0-9]{4}-[0-9]{4}-[0-9]{4}" required></td>
+                </tr>
+                <tr>
+                    <td class="label">Jenis Pasien</td>
+                    <td>
+                        <select name="jenis_pasien" required>
+                            <option value="">Pilih Jenis Pasien</option>
+                            <option value="umum">Umum</option>
+                            <option value="bpjs">BPJS</option>
+                            <option value="asuransi">Asuransi</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                        <button type="submit">Daftar Sekarang</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+</html>

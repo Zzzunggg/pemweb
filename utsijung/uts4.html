@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portal - Academic Information System</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#6366f1'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+        }
+        .sidebar-link.active {
+            background-color: rgba(59, 130, 246, 0.1);
+            color: #3b82f6;
+            border-left: 3px solid #3b82f6;
+        }
+        .announcement-card {
+            border-left: 4px solid;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex flex-col min-h-screen">
+        <!-- Header -->
+        <header class="bg-primary text-white py-4 px-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center">
+                    <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-4">
+                        <span class="font-['Pacifico'] text-primary text-xl">logo</span>
+                    </div>
+                    <div>
+                        <h1 class="text-xl font-bold">ACADEMIC WEBSITE - UNIVERSITY OF EXCELLENCE</h1>
+                        <p class="text-sm">Student Portal - Academic Information System</p>
+                        <p class="text-xs mt-1">123 University Avenue, Academic District, Excellence City</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="flex flex-1">
+            <!-- Sidebar Navigation -->
+            <aside class="w-64 bg-white border-r border-gray-200 flex-shrink-0">
+                <nav class="py-4">
+                    <ul>
+                        <li>
+                            <a href="#" class="sidebar-link active flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
+                                <div class="w-6 h-6 flex items-center justify-center mr-3">
+                                    <i class="ri-home-line"></i>
+                                </div>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebar-link flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
+                                <div class="w-6 h-6 flex items-center justify-center mr-3">
+                                    <i class="ri-book-open-line"></i>
+                                </div>
+                                <span>Academics</span>
+                                <div class="w-4 h-4 flex items-center justify-center ml-auto">
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebar-link flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
+                                <div class="w-6 h-6 flex items-center justify-center mr-3">
+                                    <i class="ri-user-line"></i>
+                                </div>
+                                <span>Profile</span>
+                                <div class="w-4 h-4 flex items-center justify-center ml-auto">
+                                    <i class="ri-arrow-down-s-line"></i>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebar-link flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
+                                <div class="w-6 h-6 flex items-center justify-center mr-3">
+                                    <i class="ri-calendar-line"></i>
+                                </div>
+                                <span>Calendar</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="sidebar-link flex items-center px-6 py-3 text-gray-700 hover:bg-gray-100">
+                                <div class="w-6 h-6 flex items-center justify-center mr-3">
+                                    <i class="ri-message-3-line"></i>
+                                </div>
+                                <span>Messages</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="flex-1 p-6">
+                <!-- Welcome Banner -->
+                <div class="bg-white rounded shadow-sm mb-8 overflow-hidden">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/3">
+                            <img src="https://readdy.ai/api/search-image?query=beautiful%20university%20campus%20with%20historic%20buildings%2C%20students%20walking%2C%20sunny%20day%2C%20academic%20atmosphere%2C%20European%20architecture%20style%2C%20spring%20season&width=400&height=300&seq=123&orientation=landscape" alt="Campus View" class="w-full h-full object-cover object-top">
+                        </div>
+                        <div class="p-6 md:w-2/3">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-3">WELCOME TO SPRING SEMESTER 2025</h2>
+                            <p class="text-gray-600 mb-4">
+                                The Spring Semester has officially begun! We're excited to welcome all students back to campus for another enriching academic term. Our faculty has prepared innovative courses and engaging learning experiences to help you achieve your educational goals.
+                            </p>
+                            <button class="bg-primary text-white px-4 py-2 rounded-button flex items-center !rounded-button whitespace-nowrap">
+                                <div class="w-5 h-5 flex items-center justify-center mr-2">
+                                    <i class="ri-calendar-line"></i>
+                                </div>
+                                View Academic Calendar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Latest Announcements -->
+                <div class="mb-8">
+                    <h3 class="text-xl font-bold text-gray-800 mb-4">LATEST ANNOUNCEMENTS</h3>
+                    
+                    <div class="space-y-4">
+                        <!-- Announcement 1 -->
+                        <div class="announcement-card bg-white rounded shadow-sm p-4" style="border-left-color: #3b82f6;">
+                            <h4 class="font-bold text-gray-800 mb-2">Library Extended Hours During Midterms</h4>
+                            <p class="text-gray-600 mb-3">
+                                The university library will extend its operating hours from 7:00 AM to 2:00 AM during the midterm examination period (May 1-12, 2025). Additional study rooms have been made available for group study sessions.
+                            </p>
+                            <p class="text-sm text-gray-500">Posted by: Academic Affairs Office • April 15, 2025</p>
+                        </div>
+
+                        <!-- Announcement 2 -->
+                        <div class="announcement-card bg-white rounded shadow-sm p-4" style="border-left-color: #8b5cf6;">
+                            <h4 class="font-bold text-gray-800 mb-2">Research Symposium Registration Now Open</h4>
+                            <p class="text-gray-600 mb-3">
+                                Registration for the Annual Undergraduate Research Symposium is now open. Students interested in presenting their research projects should submit their abstracts by April 30, 2025. This year's symposium will feature keynote speaker Dr. Eleanor Richards from Cambridge University.
+                            </p>
+                            <p class="text-sm text-gray-500">Posted by: Research Department • April 12, 2025</p>
+                        </div>
+
+                        <!-- Announcement 3 -->
+                        <div class="announcement-card bg-white rounded shadow-sm p-4" style="border-left-color: #10b981;">
+                            <h4 class="font-bold text-gray-800 mb-2">Campus Sustainability Initiative Launch</h4>
+                            <p class="text-gray-600 mb-3">
+                                The University is proud to announce the launch of our new Campus Sustainability Initiative. Starting next month, we will implement comprehensive recycling programs, energy-efficient lighting across campus, and introduce electric vehicle charging stations in all parking areas.
+                            </p>
+                            <p class="text-sm text-gray-500">Posted by: Facilities Management • April 10, 2025</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Right Sidebar -->
+            <aside class="w-72 bg-white border-l border-gray-200 p-6 flex-shrink-0">
+                <!-- Quick Links -->
+                <div class="mb-8">
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">QUICK LINKS</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#" class="flex items-center text-gray-700 hover:text-primary">
+                                <div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center mr-3">
+                                    <i class="ri-book-mark-line text-blue-500"></i>
+                                </div>
+                                <span>Academic Resources</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-gray-700 hover:text-primary">
+                                <div class="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center mr-3">
+                                    <i class="ri-book-read-line text-indigo-500"></i>
+                                </div>
+                                <span>Library Services</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-gray-700 hover:text-primary">
+                                <div class="w-8 h-8 rounded-full bg-green-100 flex items-center justify-center mr-3">
+                                    <i class="ri-team-line text-green-500"></i>
+                                </div>
+                                <span>Student Organizations</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-gray-700 hover:text-primary">
+                                <div class="w-8 h-8 rounded-full bg-yellow-100 flex items-center justify-center mr-3">
+                                    <i class="ri-calendar-event-line text-yellow-600"></i>
+                                </div>
+                                <span>Campus Events</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="flex items-center text-gray-700 hover:text-primary">
+                                <div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center mr-3">
+                                    <i class="ri-heart-pulse-line text-red-500"></i>
+                                </div>
+                                <span>Health Services</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Upcoming Events -->
+                <div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-4">UPCOMING EVENTS</h3>
+                    <ul class="space-y-4">
+                        <li>
+                            <h4 class="font-medium text-gray-800">Career Fair</h4>
+                            <p class="text-sm text-gray-600">Apr 20, 2025 • 10:00 AM</p>
+                        </li>
+                        <li>
+                            <h4 class="font-medium text-gray-800">Guest Lecture: AI Ethics</h4>
+                            <p class="text-sm text-gray-600">Apr 22, 2025 • 2:00 PM</p>
+                        </li>
+                        <li>
+                            <h4 class="font-medium text-gray-800">Spring Concert</h4>
+                            <p class="text-sm text-gray-600">Apr 25, 2025 • 7:00 PM</p>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-primary bg-gradient-to-r from-primary to-secondary text-white py-4 px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="mr-2 text-2xl font-['Pacifico']">UExcellence</div>
+                    <div class="text-sm">© Copyright 2025. All Rights Reserved</div>
+                </div>
+                <div class="flex items-center">
+                    <div class="mr-4">Contact: info@university.edu • +1 (555) 123-4567</div>
+                    <div class="flex space-x-2">
+                        <a href="#" class="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                            <i class="ri-facebook-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                            <i class="ri-twitter-x-fill text-white"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center">
+                            <i class="ri-instagram-line text-white"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Sidebar navigation active state
+            const sidebarLinks = document.querySelectorAll('.sidebar-link');
+            sidebarLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    sidebarLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

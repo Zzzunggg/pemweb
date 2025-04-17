@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Website</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: { primary: "#4A90E2", secondary: "#7B68EE" },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <style>
+      :where([class^="ri-"])::before { content: "\f3c2"; }
+      body {
+          font-family: 'Inter', sans-serif;
+      }
+      .gradient-header {
+          background: linear-gradient(90deg, #4A90E2 0%, #7B68EE 100%);
+      }
+      .submenu {
+          max-height: 0;
+          overflow: hidden;
+          transition: max-height 0.3s ease;
+      }
+      .submenu.active {
+          max-height: 500px;
+      }
+      .menu-item:hover {
+          background-color: rgba(74, 144, 226, 0.1);
+      }
+      .category-item {
+          transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+      .category-item:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+      .custom-scrollbar::-webkit-scrollbar {
+          width: 8px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-track {
+          background: #f1f1f1;
+          border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: #c1c1c1;
+          border-radius: 10px;
+      }
+      .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #a8a8a8;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8 max-w-7xl">
+      <!-- Window Frame -->
+      <div class="border border-gray-300 rounded shadow-lg overflow-hidden">
+        <!-- Window Header -->
+        <div class="bg-gray-200 px-4 py-2 flex justify-between items-center">
+          <div class="text-gray-700 font-medium">ACADEMIC WEBSITE</div>
+          <div class="flex space-x-2">
+            <button
+              class="w-4 h-4 bg-gray-300 rounded-full hover:bg-gray-400 flex items-center justify-center"
+            >
+              <i class="ri-subtract-line text-xs text-gray-700"></i>
+            </button>
+            <button
+              class="w-4 h-4 bg-gray-300 rounded-full hover:bg-gray-400 flex items-center justify-center"
+            >
+              <i class="ri-fullscreen-line text-xs text-gray-700"></i>
+            </button>
+            <button
+              class="w-4 h-4 bg-gray-300 rounded-full hover:bg-gray-400 flex items-center justify-center"
+            >
+              <i class="ri-close-line text-xs text-gray-700"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Website Header -->
+        <div class="gradient-header px-6 py-5 flex items-center">
+          <div
+            class="w-20 h-20 rounded-full bg-white flex items-center justify-center shadow-md"
+          >
+            <span class="font-['Pacifico'] text-2xl text-primary">logo</span>
+          </div>
+          <div class="ml-6 text-white">
+            <h1 class="text-2xl font-bold">
+              ACADEMIC WEBSITE - UNIVERSITY OF EXCELLENCE
+            </h1>
+            <h2 class="text-lg mt-1">
+              Student Portal - Academic Information System
+            </h2>
+            <p class="text-sm mt-1 opacity-90">
+              123 University Avenue, Academic District, Excellence City
+            </p>
+          </div>
+        </div>
+
+        <!-- Content Area -->
+        <div class="flex min-h-[500px]">
+          <!-- Left Sidebar Navigation -->
+          <div
+            class="w-64 border-r border-gray-200 p-4 custom-scrollbar overflow-y-auto"
+          >
+            <div
+              class="menu-item flex items-center p-2 rounded cursor-pointer mb-1 text-gray-700 hover:text-primary"
+            >
+              <i
+                class="ri-home-line mr-2 w-5 h-5 flex items-center justify-center"
+              ></i>
+              <span>Home</span>
+            </div>
+
+            <div class="menu-container mb-1">
+              <div
+                class="menu-item flex items-center justify-between p-2 rounded cursor-pointer text-gray-700 hover:text-primary"
+              >
+                <div class="flex items-center">
+                  <i
+                    class="ri-book-open-line mr-2 w-5 h-5 flex items-center justify-center"
+                  ></i>
+                  <span>Academics</span>
+                </div>
+                <i
+                  class="ri-arrow-down-s-line w-5 h-5 flex items-center justify-center"
+                ></i>
+              </div>
+              <div class="submenu pl-7">
+                <div
+                  class="menu-item p-2 rounded cursor-pointer text-gray-600 hover:text-primary"
+                >
+                  Courses
+                </div>
+                <div
+                  class="menu-item p-2 rounded cursor-pointer text-gray-600 hover:text-primary"
+                >
+                  Schedule
+                </div>
+                <div class="menu-container">
+                  <div
+                    class="menu-item flex items-center justify-between p-2 rounded cursor-pointer text-gray-600 hover:text-primary"
+                  >
+                    <span>Exams</span>
+                    <i
+                      class="ri-arrow-down-s-line w-5 h-5 flex items-center justify-center"
+                    ></i>
+                  </div>
+                  <div class="submenu pl-4">
+                    <div
+                      class="menu-item p-2 rounded cursor-pointer text-gray-600 hover:text-primary"
+                    >
+                      Midterms
+                    </div>
+                    <div
+                      class="menu-item p-2 rounded cursor-pointer text-gray-600 hover:text-primary"
+                    >
+                      Finals
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-container mb-1">
+              <div
+                class="menu-item flex items-center justify-between p-2 rounded cursor-pointer text-gray-700 hover:text-primary"
+              >
+                <div class="flex items-center">
+                  <i
+                    class="ri-user-line mr-2 w-5 h-5 flex items-center justify-center"
+                  ></i>
+                  <span>Profile</span>
+                </div>
+                <i
+                  class="ri-arrow-down-s-line w-5 h-5 flex items-center justify-center"
+                ></i>
+              </div>
+              <div class="submenu pl-7">
+                <div
+                  class="menu-item p-2 rounded cursor-pointer text-gray-600 hover:text-primary"
+                >
+                  Personal Info
+                </div>
+                <div
+                  class="menu-item p-2 rounded cursor-pointer text-gray-600 hover:text-primary"
+                >
+                  Academic Records
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="menu-item flex items-center p-2 rounded cursor-pointer mb-1 text-gray-700 hover:text-primary"
+            >
+              <i
+                class="ri-calendar-line mr-2 w-5 h-5 flex items-center justify-center"
+              ></i>
+              <span>Calendar</span>
+            </div>
+
+            <div
+              class="menu-item flex items-center p-2 rounded cursor-pointer mb-1 text-gray-700 hover:text-primary"
+            >
+              <i
+                class="ri-message-3-line mr-2 w-5 h-5 flex items-center justify-center"
+              ></i>
+              <span>Messages</span>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <div class="flex-1 p-6 custom-scrollbar overflow-y-auto">
+            <div class="bg-white rounded-lg shadow-md p-6 mb-6">
+              <div class="flex mb-4">
+                <div
+                  class="w-48 h-40 bg-gray-200 rounded-lg overflow-hidden mr-6 flex-shrink-0"
+                >
+                  <img
+                    src="https://readdy.ai/api/search-image?query=modern%20university%20campus%20with%20beautiful%20architecture%2C%20sunny%20day%2C%20students%20walking%2C%20academic%20atmosphere%2C%20high%20quality%20professional%20photograph&width=400&height=300&seq=1&orientation=landscape"
+                    alt="University Campus"
+                    class="w-full h-full object-cover object-top"
+                  />
+                </div>
+                <div>
+                  <h2 class="text-2xl font-bold text-gray-800 mb-3">
+                    WELCOME TO SPRING SEMESTER 2025
+                  </h2>
+                  <p class="text-gray-700 leading-relaxed">
+                    The Spring Semester has officially begun! We're excited to
+                    welcome all students back to campus for another enriching
+                    academic term. Our faculty has prepared innovative courses
+                    and engaging learning experiences to help you achieve your
+                    educational goals.
+                  </p>
+                  <button
+                    class="mt-4 bg-primary text-white px-4 py-2 rounded-button hover:bg-opacity-90 transition-all whitespace-nowrap flex items-center"
+                  >
+                    <i
+                      class="ri-calendar-check-line mr-2 w-5 h-5 flex items-center justify-center"
+                    ></i>
+                    View Academic Calendar
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white rounded-lg shadow-md p-6">
+              <h2 class="text-xl font-bold text-gray-800 mb-4">
+                LATEST ANNOUNCEMENTS
+              </h2>
+              <div class="border-l-4 border-primary pl-4 mb-6">
+                <h3 class="font-semibold text-gray-800">
+                  Library Extended Hours During Midterms
+                </h3>
+                <p class="text-gray-700 mt-2">
+                  The university library will extend its operating hours from
+                  7:00 AM to 2:00 AM during the midterm examination period (May
+                  1-12, 2025). Additional study rooms have been made available
+                  for group study sessions.
+                </p>
+                <div class="text-sm text-gray-500 mt-2">
+                  Posted by: Academic Affairs Office • April 15, 2025
+                </div>
+              </div>
+
+              <div class="border-l-4 border-secondary pl-4 mb-6">
+                <h3 class="font-semibold text-gray-800">
+                  Research Symposium Registration Now Open
+                </h3>
+                <p class="text-gray-700 mt-2">
+                  Registration for the Annual Undergraduate Research Symposium
+                  is now open. Students interested in presenting their research
+                  projects should submit their abstracts by April 30, 2025. This
+                  year's symposium will feature keynote speaker Dr. Eleanor
+                  Richards from Cambridge University.
+                </p>
+                <div class="text-sm text-gray-500 mt-2">
+                  Posted by: Research Department • April 12, 2025
+                </div>
+              </div>
+
+              <div class="border-l-4 border-green-500 pl-4">
+                <h3 class="font-semibold text-gray-800">
+                  Campus Sustainability Initiative Launch
+                </h3>
+                <p class="text-gray-700 mt-2">
+                  The University is proud to announce the launch of our new
+                  Campus Sustainability Initiative. Starting next month, we will
+                  implement comprehensive recycling programs, energy-efficient
+                  lighting across campus, and introduce electric vehicle
+                  charging stations in all parking areas.
+                </p>
+                <div class="text-sm text-gray-500 mt-2">
+                  Posted by: Facilities Management • April 10, 2025
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Sidebar Categories -->
+          <div
+            class="w-64 border-l border-gray-200 p-4 custom-scrollbar overflow-y-auto"
+          >
+            <h3 class="font-bold text-gray-700 mb-4">QUICK LINKS</h3>
+
+            <div
+              class="category-item mb-3 p-3 rounded-lg bg-blue-50 border-l-4 border-primary cursor-pointer"
+            >
+              <div class="flex items-center text-primary font-medium">
+                <i
+                  class="ri-graduation-cap-line mr-2 w-5 h-5 flex items-center justify-center"
+                ></i>
+                Academic Resources
+              </div>
+            </div>
+
+            <div
+              class="category-item mb-3 p-3 rounded-lg bg-purple-50 border-l-4 border-secondary cursor-pointer"
+            >
+              <div class="flex items-center text-secondary font-medium">
+                <i
+                  class="ri-book-mark-line mr-2 w-5 h-5 flex items-center justify-center"
+                ></i>
+                Library Services
+              </div>
+            </div>
+
+            <div
+              class="category-item mb-3 p-3 rounded-lg bg-green-50 border-l-4 border-green-500 cursor-pointer"
+            >
+              <div class="flex items-center text-green-600 font-medium">
+                <i
+                  class="ri-group-line mr-2 w-5 h-5 flex items-center justify-center"
+                ></i>
+                Student Organizations
+              </div>
+            </div>
+
+            <div
+              class="category-item mb-3 p-3 rounded-lg bg-yellow-50 border-l-4 border-yellow-500 cursor-pointer"
+            >
+              <div class="flex items-center text-yellow-600 font-medium">
+                <i
+                  class="ri-calendar-event-line mr-2 w-5 h-5 flex items-center justify-center"
+                ></i>
+                Campus Events
+              </div>
+            </div>
+
+            <div
+              class="category-item mb-3 p-3 rounded-lg bg-red-50 border-l-4 border-red-500 cursor-pointer"
+            >
+              <div class="flex items-center text-red-600 font-medium">
+                <i
+                  class="ri-first-aid-kit-line mr-2 w-5 h-5 flex items-center justify-center"
+                ></i>
+                Health Services
+              </div>
+            </div>
+
+            <div class="mt-8">
+              <h3 class="font-bold text-gray-700 mb-4">UPCOMING EVENTS</h3>
+              <div class="text-sm">
+                <div class="mb-3 pb-3 border-b border-gray-200">
+                  <div class="font-medium">Career Fair</div>
+                  <div class="text-gray-600">April 20, 2025 • 10:00 AM</div>
+                </div>
+                <div class="mb-3 pb-3 border-b border-gray-200">
+                  <div class="font-medium">Guest Lecture: AI Ethics</div>
+                  <div class="text-gray-600">April 22, 2025 • 2:00 PM</div>
+                </div>
+                <div>
+                  <div class="font-medium">Spring Concert</div>
+                  <div class="text-gray-600">April 25, 2025 • 7:00 PM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer -->
+        <div
+          class="gradient-header px-6 py-4 flex justify-between items-center text-white"
+        >
+          <div class="flex items-center">
+            <span class="font-['Pacifico'] text-xl mr-2">UExcellence</span>
+            <span class="text-sm">© Copyright 2025. All Rights Reserved</span>
+          </div>
+          <div class="flex items-center">
+            <div class="mr-6 text-sm">
+              Contact: info@university.edu • +1 (555) 123-4567
+            </div>
+            <div class="flex space-x-3">
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition-all"
+              >
+                <i
+                  class="ri-facebook-fill text-white w-4 h-4 flex items-center justify-center"
+                ></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition-all"
+              >
+                <i
+                  class="ri-twitter-x-fill text-white w-4 h-4 flex items-center justify-center"
+                ></i>
+              </a>
+              <a
+                href="#"
+                class="w-8 h-8 rounded-full bg-white bg-opacity-20 flex items-center justify-center hover:bg-opacity-30 transition-all"
+              >
+                <i
+                  class="ri-instagram-line text-white w-4 h-4 flex items-center justify-center"
+                ></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const menuItems = document.querySelectorAll(".menu-container > .menu-item");
+
+        menuItems.forEach((item) => {
+          item.addEventListener("click", function () {
+            const submenu = this.nextElementSibling;
+            if (submenu && submenu.classList.contains("submenu")) {
+              submenu.classList.toggle("active");
+              const arrow = this.querySelector(".ri-arrow-down-s-line");
+              if (arrow) {
+                arrow.classList.toggle("ri-arrow-up-s-line");
+                arrow.classList.toggle("ri-arrow-down-s-line");
+              }
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
